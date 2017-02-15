@@ -1,0 +1,24 @@
+{
+  "name": "smartsass",
+  "version": "1.0.0",
+  "description": "smart wrapper for sass",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "(npmts)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pushrocks/smartsass.git"
+  },
+  "keywords": [
+    "SASS",
+    "Promise",
+    "Lossless"
+  ],
+  "author": "Lossless GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/pushrocks/smartsass/issues"
+  },
+  "homepage": "https://gitlab.com/pushrocks/smartsass#README"
+}
