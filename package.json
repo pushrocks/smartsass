@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://gitlab.com/pushrocks/smartsass/issues"
   },
-  "homepage": "https://gitlab.com/pushrocks/smartsass#README"
+  "homepage": "https://gitlab.com/pushrocks/smartsass#README",
+  "dependencies": {
+    "@types/node-sass": "^3.10.32",
+    "node-sass": "^4.5.0",
+    "smartfile": "^4.1.7",
+    "smartq": "^1.1.1",
+    "typings-global": "^1.0.14"
+  }
 }
