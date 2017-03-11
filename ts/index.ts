@@ -13,7 +13,7 @@ export class Smartsass {
   entryFilePath: string
   constructor(optionsArg: ISmartsassConstructorOptions) {
     this.entryFilePath = optionsArg.entryFilePath
-    if(optionsArg.includePaths) {
+    if (optionsArg.includePaths) {
       for (let includePath of optionsArg.includePaths) {
         this.includePaths.push(includePath)
       }
