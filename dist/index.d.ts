@@ -1,8 +1,10 @@
 import { Result } from 'node-sass';
 export interface ISmartsassConstructorOptions {
     entryFilePath: string;
+    includePaths?: string[];
 }
 export declare class Smartsass {
+    includePaths: any[];
     entryFilePath: string;
     constructor(optionsArg: ISmartsassConstructorOptions);
     /**
