@@ -21,6 +21,15 @@ export class Smartsass {
   }
 
   /**
+   * add further include paths
+   */
+  addIncludePaths (includePathsArray: string[]) {
+    for (let includePath of includePathsArray) {
+      this.includePaths.push(includePath)
+    }
+  }
+
+  /**
    * renders the Smartsass classes' entryfile and returns result as string
    */
   render() {

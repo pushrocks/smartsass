@@ -8,6 +8,10 @@ export declare class Smartsass {
     entryFilePath: string;
     constructor(optionsArg: ISmartsassConstructorOptions);
     /**
+     * add further include paths
+     */
+    addIncludePaths(includePathsArray: string[]): void;
+    /**
      * renders the Smartsass classes' entryfile and returns result as string
      */
     render(): Promise<Result>;
