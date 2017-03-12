@@ -21,6 +21,10 @@ smart wrapper for sass
 ## Usage
 Use TypeScript for best in class instellisense.
 
+```javascript
+import * as smartsass from Smartsass
+```
+
 For further information read the linked docs at the top of this README.
 
 > MIT licensed | **&copy;** [Lossless GmbH](https://lossless.gmbh)
