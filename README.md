@@ -23,6 +23,17 @@ Use TypeScript for best in class instellisense.
 
 ```javascript
 import * as smartsass from Smartsass
+import * as bourbon from 'bourbon
+import * as neat from 'neat'
+
+let mySmartsass = new smartsass.Smartsass({
+  filePath: './some.css',
+  includePaths: boubon.includePaths
+})
+
+mySmartsass.addIncludePaths(neat.includePaths)
+
+let renderedString = mySmartsass.render()
 ```
 
 For further information read the linked docs at the top of this README.
