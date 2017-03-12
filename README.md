@@ -22,7 +22,7 @@ smart wrapper for sass
 Use TypeScript for best in class instellisense.
 
 ```javascript
-import * as smartsass from Smartsass
+import * as smartsass from 'smartsass'
 import * as bourbon from 'bourbon
 import * as neat from 'neat'
 
