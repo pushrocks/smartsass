@@ -28,7 +28,7 @@ import * as neat from 'neat'
 
 let mySmartsass = new smartsass.Smartsass({
   filePath: './some.css',
-  includePaths: boubon.includePaths
+  includePaths: bourbon.includePaths
 })
 
 mySmartsass.addIncludePaths(neat.includePaths)
