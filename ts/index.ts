@@ -1,21 +1,22 @@
-import * as plugins from './smartsass.plugins'
+import * as plugins from './smartsass.plugins';
 
 // interfaces
-import { Result } from 'node-sass'
+import { Result } from 'node-sass';
 
 export interface ISmartsassConstructorOptions {
-  entryFilePath: string,
-  includePaths?: string[]
+  data?: string;
+  entryFilePath?: string;
+  includePaths?: string[];
 }
 
 export class Smartsass {
-  includePaths = []
-  entryFilePath: string
+  includePaths = [];
+  entryFilePath: string;
   constructor(optionsArg: ISmartsassConstructorOptions) {
-    this.entryFilePath = optionsArg.entryFilePath
+    this.entryFilePath = optionsArg.entryFilePath;
     if (optionsArg.includePaths) {
       for (let includePath of optionsArg.includePaths) {
-        this.includePaths.push(includePath)
+        this.includePaths.push(includePath);
       }
     }
   }
@@ -23,9 +24,9 @@ export class Smartsass {
   /**
    * add further include paths
    */
-  addIncludePaths (includePathsArray: string[]) {
+  addIncludePaths(includePathsArray: string[]) {
     for (let includePath of includePathsArray) {
-      this.includePaths.push(includePath)
+      this.includePaths.push(includePath);
     }
   }
 
@@ -33,25 +34,28 @@ export class Smartsass {
    * renders the Smartsass classes' entryfile and returns result as string
    */
   render() {
-    let done = plugins.smartq.defer<plugins.sass.Result>()
-    plugins.sass.render({
-      file: this.entryFilePath,
-      includePaths: this.includePaths
-    }, function (err, result) {
-      if (err) {
-        console.log(err)
-        done.reject(err)
+    let done = plugins.smartpromise.defer<plugins.sass.Result>();
+    plugins.sass.render(
+      {
+        file: this.entryFilePath,
+        includePaths: this.includePaths
+      },
+      function(err, result) {
+        if (err) {
+          console.log(err);
+          done.reject(err);
+        }
+        done.resolve(result);
       }
-      done.resolve(result)
-    })
-    return done.promise
+    );
+    return done.promise;
   }
 
   /**
    * renders and stores
    */
-  async renderAndStore (outputFilePath: string) {
-    let result = await this.render()
-    await plugins.smartfile.memory.toFs(result.css.toString(), outputFilePath)
+  async renderAndStore(outputFilePath: string) {
+    let result = await this.render();
+    await plugins.smartfile.memory.toFs(result.css.toString(), outputFilePath);
   }
 }

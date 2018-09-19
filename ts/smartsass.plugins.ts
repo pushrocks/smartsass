@@ -1,10 +1,5 @@
-import 'typings-global'
-import * as sass from 'node-sass'
-import * as smartfile from 'smartfile'
-import * as smartq from 'smartq'
+import * as sass from 'node-sass';
+import * as smartfile from '@pushrocks/smartfile';
+import * as smartpromise from '@pushrocks/smartpromise';
 
-export {
-  sass,
-  smartfile,
-  smartq
-}
+export { sass, smartfile, smartpromise };

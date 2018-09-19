@@ -1,1 +1,1 @@
-import * as plugins from './smartsass.plugins'
+import * as plugins from './smartsass.plugins';
