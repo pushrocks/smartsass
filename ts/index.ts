@@ -12,8 +12,10 @@ export interface ISmartsassConstructorOptions {
 export class Smartsass {
   includePaths = [];
   entryFilePath: string;
+  data: string;
   constructor(optionsArg: ISmartsassConstructorOptions) {
     this.entryFilePath = optionsArg.entryFilePath;
+    this.data = optionsArg.data;
     if (optionsArg.includePaths) {
       for (let includePath of optionsArg.includePaths) {
         this.includePaths.push(includePath);
@@ -37,6 +39,7 @@ export class Smartsass {
     let done = plugins.smartpromise.defer<plugins.sass.Result>();
     plugins.sass.render(
       {
+        data: this.data,
         file: this.entryFilePath,
         includePaths: this.includePaths
       },
