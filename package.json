@@ -1,6 +1,6 @@
 {
   "name": "@pushrocks/smartsass",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": false,
   "description": "smart wrapper for sass",
   "main": "dist/index.js",
