@@ -28,16 +28,16 @@
     "@pushrocks/smartfile": "^7.0.6",
     "@pushrocks/smartpromise": "^3.0.6",
     "@types/node-sass": "^4.11.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.0"
   },
   "devDependencies": {
     "@gitzone/tsbuild": "^2.1.17",
     "@gitzone/tsrun": "^1.2.8",
     "@gitzone/tstest": "^1.0.28",
-    "@pushrocks/tapbundle": "^3.0.13",
-    "@types/node": "^12.7.12",
-    "tslint": "^5.20.0",
-    "tslint-config-prettier": "^1.17.0"
+    "@pushrocks/tapbundle": "^3.2.0",
+    "@types/node": "^13.1.6",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0"
   },
   "files": [
     "ts/**/*",
